@@ -30,15 +30,31 @@ app.listen(port, () => {
     console.log('Server is up on port ', port);
 })
 
-const bcrypt = require('bcryptjs');
 
-const jwt = require('jsonwebtoken');
+const Task = require ('./models/task');
+const User = require ('./models/user');
 
-const myFunction = async () => {
-    const token = jwt.sign({_id: 'abc123'}, 'thsisisencryptionhash', { expiresIn: '1 hour'});
-    console.log(token);
-    const data = jwt.verify(token, 'thsisisencryptionhash')
+const main = async () => {
+    // const task = await Task.findById('62b1a5f465223cfe3cf4f2d0');
+    // await task.populate('owner');
+    // console.log(task.owner);
 
+    const user = await User.findById('62b1a5df65223cfe3cf4f2c7');
+    await user.populate('tasks');
+    console.log(user.tasks); 
 }
 
-myFunction()
+main()
+
+// const bcrypt = require('bcryptjs');
+
+// const jwt = require('jsonwebtoken');
+
+// const myFunction = async () => {
+//     const token = jwt.sign({_id: 'abc123'}, 'thsisisencryptionhash', { expiresIn: '1 hour'});
+//     console.log(token);
+//     const data = jwt.verify(token, 'thsisisencryptionhash')
+
+// }
+
+// myFunction()
