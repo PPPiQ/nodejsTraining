@@ -1,13 +1,1 @@
-{ 
-  "scripts": {
-    "db": "C:\\Users\\piotr.pik\\Documents\\mongodb\\mongodb\\bin\\mongod.exe --dbpath=\"c:\\Users\\piotr.pik\\Documents\\mongodb\\data\" "
-  },
-
-  "dependencies": {
-    "chalk": "^5.0.1",
-    "express": "^4.18.1",
-    "hbs": "^4.2.0",
-    "nodemon": "^2.0.16",
-    "request": "^2.88.2"
-  }
-}
+{"scripts":{"db":"C:\\Users\\piotr.pik\\Documents\\mongodb\\mongodb\\bin\\mongod.exe --dbpath=\"c:\\Users\\piotr.pik\\Documents\\mongodb\\data\" "},"dependencies":{"chalk":"^5.0.1","express":"^4.18.1","hbs":"^4.2.0","nodemon":"^2.0.16","request":"^2.88.2","sharp":"^0.30.7"},"devDependencies":{"env-cmd":"^10.1.0"}}
